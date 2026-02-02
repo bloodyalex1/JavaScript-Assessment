@@ -1,0 +1,134 @@
+{
+  "usuarios": [
+    {
+      "id": "1q2kfzdye",
+      "nombre": "Juan david santamaria",
+      "email": "santamariajuan34@gmail.com",
+      "password": "123456",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-02T12:02:39.935Z"
+    },
+    {
+      "id": "admin001",
+      "nombre": "Administrador CRUDTASK",
+      "email": "admin@crudtask.com",
+      "password": "admin123",
+      "rol": "admin",
+      "fechaRegistro": "2026-02-02T00:00:00.000Z"
+    },
+    {
+      "nombre": "daniel",
+      "email": "daniel@gmail.com",
+      "password": "daniel",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-02T12:41:11.983Z",
+      "id": "n6gvo5giy"
+    },
+    {
+      "id": "wrizn3qw5",
+      "nombre": "santiago",
+      "email": "santi@gmail.com",
+      "password": "santi123",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-02T14:15:28.833Z"
+    },
+    {
+      "nombre": "kevin antonio",
+      "email": "kevin323@gmail.com",
+      "password": "kevin324242",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-02T14:35:59.400Z",
+      "id": "j7cfsxr9k"
+    },
+    {
+      "nombre": "pedrito Sanchez",
+      "email": "pedrito@gmail.com",
+      "password": "12345678",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-02T20:51:06.976Z",
+      "id": "5qf319dqg"
+    }
+  ],
+  "tareas": [
+    {
+      "id": "nqfh453vs",
+      "titulo": "jugar play",
+      "descripcion": "jugar",
+      "fechaEntrega": "2026-05-02",
+      "prioridad": "media",
+      "estado": "pendiente",
+      "usuarioId": "1q2kfzdye",
+      "fechaCreacion": "2026-02-02T12:51:06.472Z"
+    },
+    {
+      "id": "845xq8fks",
+      "titulo": "fgsgsg",
+      "descripcion": "gsgsgs",
+      "fechaEntrega": "2026-02-02",
+      "prioridad": "baja",
+      "estado": "completada",
+      "usuarioId": "n6gvo5giy",
+      "fechaCreacion": "2026-02-02T12:53:23.561Z"
+    },
+    {
+      "id": "127ojma7p",
+      "titulo": "fsgsgs",
+      "descripcion": "gsgs",
+      "fechaEntrega": "2024-01-02",
+      "prioridad": "media",
+      "estado": "pendiente",
+      "usuarioId": "wrizn3qw5",
+      "fechaCreacion": "2026-02-02T14:22:35.787Z"
+    },
+    {
+      "id": "wl1uqkvak",
+      "titulo": "desarrollar app",
+      "descripcion": "hoy",
+      "fechaEntrega": "2027-01-02",
+      "prioridad": "alta",
+      "estado": "completada",
+      "usuarioId": "j7cfsxr9k",
+      "fechaCreacion": "2026-02-02T14:36:55.459Z"
+    },
+    {
+      "id": "b8dayvzmo",
+      "titulo": "jugar ben 10",
+      "descripcion": "fsgsgs",
+      "fechaEntrega": "2023-02-02",
+      "prioridad": "media",
+      "estado": "pendiente",
+      "usuarioId": "j7cfsxr9k",
+      "fechaCreacion": "2026-02-02T15:35:19.416Z"
+    },
+    {
+      "id": "9yrzr21i4",
+      "titulo": "hdjhdjdjd",
+      "descripcion": "jdjd",
+      "fechaEntrega": "2026-02-02",
+      "prioridad": "media",
+      "estado": "completada",
+      "usuarioId": "n6gvo5giy",
+      "fechaCreacion": "2026-02-02T16:33:10.132Z"
+    },
+    {
+      "id": "nzhnr6uud",
+      "titulo": "Python",
+      "descripcion": "Python",
+      "fechaEntrega": "2026-02-31",
+      "prioridad": "alta",
+      "estado": "completada",
+      "usuarioId": "5qf319dqg",
+      "fechaCreacion": "2026-02-02T22:41:22.483Z"
+    },
+    {
+      "id": "3c6o6zs50",
+      "titulo": "Organizar la moto",
+      "descripcion": "Comprar todas las piezas de la moto",
+      "fechaEntrega": "2026-02-28",
+      "prioridad": "media",
+      "estado": "pendiente",
+      "usuarioId": "5qf319dqg",
+      "fechaCreacion": "2026-02-02T23:37:14.800Z"
+    }
+  ]
+}
