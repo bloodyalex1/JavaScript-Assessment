@@ -1,14 +1,14 @@
 
-// API URL - Asegúrate de que json-server esté corriendo en puerto 3000
+// API URL
 const API_URL = 'http://localhost:3000';
 
-// Seleccionar elementos del DOM
+// // Dom Elements
 const loginForm = document.getElementById('loginForm');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const signInBtn = document.getElementById('signInBtn');
 
-// Verificar si el usuario ya está autenticado
+// verify user
 window.addEventListener('load', () => {
     const usuarioAutenticado = localStorage.getItem('usuarioAutenticado');
     if (usuarioAutenticado) {
@@ -17,26 +17,26 @@ window.addEventListener('load', () => {
     }
 });
 
-// Escuchar el envío del formulario
+// listenning event 
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Obtener valores
+    // get value
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
-    // Validar que los campos no estén vacíos
+    // validate filled fields
     if (!email || !password) {
         alert('Por favor, completa todos los campos');
         return;
     }
 
-    // Cambiar estado del botón
+    // change buttom to state
     signInBtn.disabled = true;
     signInBtn.textContent = 'Iniciando sesión...';
 
     try {
-        // Buscar el usuario por email
+        // find user for email
         const response = await fetch(`${API_URL}/usuarios?email=${email}`);
         const usuarios = await response.json();
 
@@ -49,7 +49,7 @@ loginForm.addEventListener('submit', async (e) => {
 
         const usuario = usuarios[0];
 
-        // Verificar contraseña
+        // verify password
         if (usuario.password !== password) {
             alert('Contraseña incorrecta');
             signInBtn.disabled = false;
@@ -57,7 +57,7 @@ loginForm.addEventListener('submit', async (e) => {
             return;
         }
 
-        // Login exitoso - Guardar sesión
+        // Login well - save user
         const usuarioSesion = {
             id: usuario.id,
             nombre: usuario.nombre,
@@ -70,10 +70,10 @@ loginForm.addEventListener('submit', async (e) => {
 
         alert('¡Bienvenido ' + usuario.nombre + '!');
 
-        // Limpiar formulario
+        // clean form
         loginForm.reset();
 
-        // Redirigir según rol
+        // redirection of rol
         setTimeout(() => {
             if (usuario.rol === 'admin') {
                 window.location.href = '../admin-dashboard.html';
@@ -90,13 +90,13 @@ loginForm.addEventListener('submit', async (e) => {
     }
 });
 
-// Función para cerrar sesión (usa esto en otras páginas)
+// function to close account
 function cerrarSesion() {
     localStorage.removeItem('usuarioAutenticado');
     window.location.href = '../index.html';
 }
 
-// Función para obtener usuario autenticado
+// function to get user auth
 function obtenerUsuarioAutenticado() {
     const usuarioSesion = localStorage.getItem('usuarioAutenticado');
     return usuarioSesion ? JSON.parse(usuarioSesion) : null;

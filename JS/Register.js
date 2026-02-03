@@ -1,42 +1,41 @@
-// API URL - Asegúrate de que json-server esté corriendo en puerto 3000
+// API URL
 const API_URL = 'http://localhost:3000';
-
-// Seleccionar elementos del DOM
+// Dom elements
 const registerForm = document.getElementById('registerForm');
 const nombreInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const signBtn = document.getElementById('signBtn');
 
-// Escuchar el envío del formulario
+// listenning form send
 registerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Obtener valores
+    // get values
     const nombre = nombreInput.value.trim();
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
-    // Validar que los campos no estén vacíos
+    // Validate that the fields are not empty
     if (!nombre || !email || !password) {
         alert('Por favor, completa todos los campos');
         return;
     }
 
-    // Validar formato de email
+    // Validate email format
     if (!validarEmail(email)) {
         alert('Por favor, ingresa un email válido');
         return;
     }
 
-    // Validar que la contraseña tenga al menos 8 caracteres
+    // Verify that the password has at least 8 characters
     if (password.length < 8) {
         alert('La contraseña debe tener al menos 8 caracteres');
         return;
     }
 
     try {
-        // Verificar si el email ya existe
+        // Check if the email already exists
         const usuarioExistente = await fetch(`${API_URL}/usuarios?email=${email}`);
         const usuarios = await usuarioExistente.json();
 
@@ -45,17 +44,17 @@ registerForm.addEventListener('submit', async (e) => {
             return;
         }
 
-        // Crear nuevo usuario
+        // create a new user
         const nuevoUsuario = {
             id: generarId(),
             nombre: nombre,
             email: email,
-            password: password, // En producción, NUNCA guardes contraseñas en texto plano
+            password: password,
             rol: 'usuario',
             fechaRegistro: new Date().toISOString()
         };
 
-        // Enviar al servidor
+        // send to API
         const response = await fetch(`${API_URL}/usuarios`, {
             method: 'POST',
             headers: {
@@ -66,9 +65,9 @@ registerForm.addEventListener('submit', async (e) => {
 
         if (response.ok) {
             alert('¡Registro exitoso! Redirigiendo al login...');
-            // Limpiar formulario
+            // cleaner
             registerForm.reset();
-            // Redirigir al login después de 1.5 segundos
+            // Rredirection to login afther 1.5 seg
             setTimeout(() => {
                 window.location.href = '../index.html';
             }, 1500);
@@ -81,13 +80,13 @@ registerForm.addEventListener('submit', async (e) => {
     }
 });
 
-// Función para validar email
+// function to validations email
 function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
 
-// Función para generar un ID único
+// function to create id unique
 function generarId() {
     return Math.random().toString(36).substr(2, 9);
 }
