@@ -81,10 +81,8 @@ registerForm.addEventListener('submit', async (e) => {
 });
 
 // function to validations email
-function validarEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
+
+
 
 // function to create id unique
 function generarId() {
