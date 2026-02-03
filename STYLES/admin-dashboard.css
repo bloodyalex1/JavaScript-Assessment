@@ -67,7 +67,8 @@
     transition: all 0.2s;
     color: #333;
 }
-.title-dashboard{
+
+.title-dashboard {
     background: linear-gradient(to bottom, #ff6600, #5900ff);
     background-clip: text;
     -webkit-background-clip: text;
@@ -171,8 +172,8 @@
 }
 
 .filters-bar .filter-btn:hover {
-    border-color: #3b6156;
-    color: #3b6156;
+    border-color: #ff0000;
+    color: #000000;
 }
 
 .adminName {
@@ -180,8 +181,8 @@
 }
 
 .filters-bar .filter-btn.active {
-    background: -webkit-linear-gradient(90deg, #3b6156, #0d4338, #3b6156);
-    background: linear-gradient(90deg, #3b6156, #0d4338, #3b6156);
+    background: linear-gradient(90deg, #ff6600, #5900ff);
+
     color: white;
     border-color: transparent;
 }
@@ -224,11 +225,11 @@
 }
 
 .badge.estado-pendiente {
-    background: #ff8800;
+    background: #ffa742;
 }
 
 .badge.estado-completada {
-    background: #4ecdc4;
+    background: #32d400;
 }
 
 .badge.prioridad-alta {
@@ -240,7 +241,7 @@
 }
 
 .badge.prioridad-baja {
-    background: #4caf50;
+    background: #008304;
 }
 
 /* Actividad */

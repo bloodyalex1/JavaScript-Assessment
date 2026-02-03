@@ -1,12 +1,12 @@
 {
   "usuarios": [
     {
-      "id": "1q2kfzdye",
       "nombre": "Juan david santamaria",
       "email": "santamariajuan34@gmail.com",
-      "password": "123456",
+      "password": "12345678",
       "rol": "usuario",
-      "fechaRegistro": "2026-02-02T12:02:39.935Z"
+      "fechaRegistro": "2026-02-02T12:02:39.935Z",
+      "id": "1q2kfzdye"
     },
     {
       "id": "admin001",
@@ -39,14 +39,6 @@
       "rol": "usuario",
       "fechaRegistro": "2026-02-02T14:35:59.400Z",
       "id": "j7cfsxr9k"
-    },
-    {
-      "nombre": "pedrito Sanchez",
-      "email": "pedrito@gmail.com",
-      "password": "12345678",
-      "rol": "usuario",
-      "fechaRegistro": "2026-02-02T20:51:06.976Z",
-      "id": "5qf319dqg"
     }
   ],
   "tareas": [
@@ -56,7 +48,7 @@
       "descripcion": "jugar",
       "fechaEntrega": "2026-05-02",
       "prioridad": "media",
-      "estado": "pendiente",
+      "estado": "completada",
       "usuarioId": "1q2kfzdye",
       "fechaCreacion": "2026-02-02T12:51:06.472Z"
     },
@@ -111,24 +103,14 @@
       "fechaCreacion": "2026-02-02T16:33:10.132Z"
     },
     {
-      "id": "nzhnr6uud",
-      "titulo": "Python",
-      "descripcion": "Python",
-      "fechaEntrega": "2026-02-31",
+      "id": "vke1qu8is",
+      "titulo": "Chica Plastica",
+      "descripcion": "De noche es sata",
+      "fechaEntrega": "2026-02-02",
       "prioridad": "alta",
-      "estado": "completada",
-      "usuarioId": "5qf319dqg",
-      "fechaCreacion": "2026-02-02T22:41:22.483Z"
-    },
-    {
-      "id": "3c6o6zs50",
-      "titulo": "Organizar la moto",
-      "descripcion": "Comprar todas las piezas de la moto",
-      "fechaEntrega": "2026-02-28",
-      "prioridad": "media",
       "estado": "pendiente",
-      "usuarioId": "5qf319dqg",
-      "fechaCreacion": "2026-02-02T23:37:14.800Z"
+      "usuarioId": "1q2kfzdye",
+      "fechaCreacion": "2026-02-03T01:31:34.892Z"
     }
   ]
 }

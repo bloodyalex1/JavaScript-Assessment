@@ -5,6 +5,7 @@ const registerForm = document.getElementById('registerForm');
 const nombreInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
+const confirmPassword = document.getElementById('confirmPassword')
 const signBtn = document.getElementById('signBtn');
 
 // listenning form send
@@ -15,9 +16,10 @@ registerForm.addEventListener('submit', async (e) => {
     const nombre = nombreInput.value.trim();
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
+    const confirmpassword = confirmPassword.value.trim();
 
     // Validate that the fields are not empty
-    if (!nombre || !email || !password) {
+    if (!nombre || !email || !password || !confirmpassword) {
         alert('Por favor, completa todos los campos');
         return;
     }
@@ -28,10 +30,16 @@ registerForm.addEventListener('submit', async (e) => {
         return;
     }
 
+
     // Verify that the password has at least 8 characters
-    if (password.length < 8) {
-        alert('La contraseña debe tener al menos 8 caracteres');
+    if (password != confirmpassword) {
+        alert("La contraseña no coincide")
+        return false;
+    }
+    if (password.length < 8 && confirmpassword.length < 8) {
+        alert("La contraseña debe de tener al menos 8 caracteres")
         return;
+
     }
 
     try {
